@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hello_provider/screens/tasks.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-//          StreamProvider<FirebaseUser>.value(stream: FirebaseAuth.instance.onAuthStateChanged),
+          StreamProvider<FirebaseUser>.value(value: FirebaseAuth.instance.onAuthStateChanged),
 //          StreamProvider<List<Task>>.value(value: DatabaseService().streamTasks()),
         ],
 
