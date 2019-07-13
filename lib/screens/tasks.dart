@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +28,7 @@ class TasksScreen extends StatelessWidget {
   }
 
   _addTask() {
-    Task task = Task(title: "New Task");
+    Task task = Task(title: Random.secure().nextInt(100000).toString());
     db.createTask(task);
   }
 }

@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hello_provider/screens/tasks.dart';
 import 'package:provider/provider.dart';
 
-import 'database-service.dart';
-import 'models/task.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
