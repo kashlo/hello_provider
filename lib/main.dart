@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_provider/tasks.dart';
+import 'package:flutter_hello_provider/screens/tasks.dart';
 import 'package:provider/provider.dart';
 
 import 'database-service.dart';
@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
 //          StreamProvider<FirebaseUser>.value(stream: FirebaseAuth.instance.onAuthStateChanged),
-
-          StreamProvider<List<Task>>.value(value: DatabaseService().streamTasks()),
+//          StreamProvider<List<Task>>.value(value: DatabaseService().streamTasks()),
         ],
 
         child: MaterialApp(

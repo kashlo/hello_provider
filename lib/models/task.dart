@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Task {
-  final String id;
+  String id;
   final String title;
 
-  Task({ this.id, this.title });
+  Task({this.title });
 
 //  factory Task.fromMap(Map data) {
 //    data = data ?? { };
@@ -17,8 +17,14 @@ class Task {
     Map data = doc.data;
 
     return Task(
-        id: doc.documentID,
-        title: data['title'] ?? ''
+        title: data['title'] ?? '',
+//        id: doc.documentID,
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'title': title
+    };
   }
 }

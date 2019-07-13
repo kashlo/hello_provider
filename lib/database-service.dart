@@ -25,9 +25,8 @@ class DatabaseService {
 
   }
 
-  /// Write data
-//  Future<void> createTask(Task task) {
-//    return _db.collection('tasks').document(heroId).setData({ /* some data */ });
-//  }
+  Future<void> createTask(Task task) {
+    return _db.collection('tasks').add(task.toJson());
+  }
 
 }
