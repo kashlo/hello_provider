@@ -4,7 +4,7 @@ class Task {
   String id;
   final String title;
 
-  Task({this.title });
+  Task({this.title, this.id });
 
 //  factory Task.fromMap(Map data) {
 //    data = data ?? { };
@@ -18,7 +18,7 @@ class Task {
 
     return Task(
         title: data['title'] ?? '',
-//        id: doc.documentID,
+        id: doc.documentID,
     );
   }
 

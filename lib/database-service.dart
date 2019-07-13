@@ -29,4 +29,8 @@ class DatabaseService {
     return _db.collection('tasks').add(task.toJson());
   }
 
+  Future<void> deleteTask(Task task) {
+    return _db.collection('tasks').document(task.id).delete();
+  }
+
 }
